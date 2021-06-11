@@ -30,6 +30,7 @@ include_directories(
 	${BLAKE3_PATH}
 	${CMAKE_BINARY_DIR}/_deps/relic-src/include
 	${CMAKE_BINARY_DIR}/_deps/relic-build/include
+	/opt/homebrew/include
 )
 
 IF (WIN32)
