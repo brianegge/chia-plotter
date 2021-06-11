@@ -168,12 +168,11 @@ The binaries will end up in `build/`, you can copy them elsewhere freely (on the
 
 ---
 ### macOS Big Sur
-First you need to install a package manager called [Brew](https://brew.sh/) and [Xcode](https://apps.apple.com/app/xcode/id497799835) from the Apple App Store.
+First you need to install a package manager called [Brew](https://brew.sh/).
 ```bash
 brew install libsodium gmp cmake git autoconf automake libtool
-sudo ln -s /usr/local/include/gmp.h /Applications/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/SDKs/MacOSX.sdk/usr/include/
-sudo ln -s /usr/local/include/sodium.h /Applications/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/SDKs/MacOSX.sdk/usr/include/
-sudo ln -s /usr/local/include/sodium /Applications/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/SDKs/MacOSX.sdk/usr/include/
+export CPATH=/opt/homebrew/include
+export LIBRARY_PATH=/opt/homebrew/lib
 git clone https://github.com/madMAx43v3r/chia-plotter.git 
 cd chia-plotter
 git submodule update --init
